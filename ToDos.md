@@ -21,9 +21,26 @@
 # bg color - String
 
 
+### OwnerModel
+
+# fullname - String
+# email - String
+# number - Number
+# picture - String
+# gstin - Number
+# products - Array
+
+
 ### Statistics Model
 
 # Buyer Name - String
 # Items Ids - Array
 # Total - Number
 # Date - Number
+
+
+### Routes 
+
+# owner-routes
+# user-routes
+# product-routes

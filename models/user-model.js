@@ -33,11 +33,7 @@ const userSchema = mongoose.Schema({
     orders: {
         type: Array,
         default: []
-    },
-
-    /* Permissions */
-    isAdmin: Boolean,
-
+    }
 },
     {
         /* Time Stamps*/

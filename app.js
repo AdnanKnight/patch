@@ -1,33 +1,48 @@
+
 /* External Packages */
 const express = require('express')
 const mongoose = require('mongoose')
 const cookieParser = require('cookie-parser')
+const dbgr = require('debug')("development:mongoose")
+
 
 /* Internal Packages */
 const path = require('node:path')
 
+
 /* Exports Modules*/
-const { mongoDBUrl , Port } = require('./config/mongoose-config')
+const { mongoDBUrl, Port } = require('./config/mongoose-config')
+
+const ownersRouter = require('./routes/ownersRouter')
+const usersRouter = require('./routes/usersRouter')
+const productsRouter = require('./routes/productsRouter')
 
 
 /* Variables */
 const app = express()
 
+
 /* Middlewares */
 app.use(express.json())
-app.use(express.urlencoded({ extended : true }))
+app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
-app.use(express.static(path.join( __dirname , "public")))
+app.use(express.static(path.join(__dirname, "public")))
+
 
 /* Engines */
-app.set("view engine" , "ejs")
+app.set("view engine", "ejs")
+
+
+/* Secondary routes */
+app.use("/owners", ownersRouter)
+app.use("/users", usersRouter)
+app.use("/products", productsRouter)
 
 
 /* Primary routes */
-app.get('/' , (req, res, next) => {
+app.get('/', (req, res, next) => {
     res.send('Hello World')
 })
-
 
 
 
@@ -38,11 +53,11 @@ app.get('/' , (req, res, next) => {
 mongoose
     .connect(mongoDBUrl)
     .then(() => {
-        app.listen(5555 , () => {
-            console.log('MongoDb is successfully connected : 🚀')
-            console.log('The app is listening on PORT : 5555 ✅')
+        app.listen(Port, () => {
+            dbgr('MongoDb is successfully connected : 🚀')
+            dbgr(`The app is listening on PORT : ${Port} ✅`)
         })
     })
     .catch((err) => {
-        console.log(err)
+        dbgr(err)
     })

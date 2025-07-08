@@ -10,6 +10,10 @@ const ownerSchema = mongoose.Schema({
         type: String,
         require: true
     },
+    password: {
+        type: String,
+        require: true
+    },
     number: {
         type: Number,
         require: true
@@ -17,11 +21,11 @@ const ownerSchema = mongoose.Schema({
     picture : {
         type : [String],
         default : [],
-        required: true
+        // required: true
     },
     gstin: {
         type: Number,
-        required: true
+        // required: true
     },
 
     /* Display Arrays */

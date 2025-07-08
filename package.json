@@ -4,6 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "dev": "powershell -Command \"$env:DEBUG='development:*' ; Write-Host '✅ DEBUG mode enabled: development:*' ; nodemon app.js\"",
+    "prd": "powershell -Command \"$env:DEBUG='' ; Write-Host '🛑 DEBUG mode disabled' ; nodemon app.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,7 +14,9 @@
   "type": "commonjs",
   "dependencies": {
     "bcryptjs": "^3.0.2",
+    "config": "^4.0.0",
     "cookie-parser": "^1.4.7",
+    "debug": "^4.4.1",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",

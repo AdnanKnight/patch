@@ -1,5 +1,8 @@
-const Port = 5555;
+const config = require('config')
 
-const mongoDBUrl = "mongodb://localhost:27017/patch";
+
+const Port = `${config.get("PORT")}`;
+
+const mongoDBUrl = `${config.get("MongoDB_URI")}`;
 
 module.exports = { mongoDBUrl, Port };
