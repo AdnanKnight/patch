@@ -19,7 +19,7 @@ const userSchema = mongoose.Schema({
     /* Secondary */
     contactnumber: {
         type: Number,
-        required: true
+        // required: true
     },
     picture: {
         type: String,

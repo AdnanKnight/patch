@@ -11,9 +11,9 @@ const router = express.Router()
 
 console.log(process.env.NODE_ENV)
 
-router.get('/', (req, res, next) => {
-    res.send('Hello World : Owners')
-})
+// router.get('/admin', (req, res, next) => {
+//     res.render("createproducts")
+// })
 
 /* Owner Creation Only available in Dev Phase*/
 if (process.env.NODE_ENV === "development") {

@@ -44,3 +44,13 @@
 # owner-routes
 # user-routes
 # product-routes
+
+
+### Functionality of Routes
+
+# / - For SignUp or SignIn
+# /shop - For Shop
+# /user/scart - User's Cart
+# /admin - For Admin panel
+# /owner/products - To show all products
+# /owner/admin - To show Admin panel to create products
