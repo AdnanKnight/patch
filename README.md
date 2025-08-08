@@ -28,6 +28,12 @@ patch/ ├── frontEnd/ # React frontend │ └── ... ├── backEnd/
 
 *(Sorry I will soon add the screen shots)*
 
+## 🌍 Live Demo
+Coming soon on Vercel and Render
+
+## 📫 Connect
+LinkedIn: www.linkedin.com/in/adnan-haque-ah5
+
 ## 🛠️ Getting Started
 
 1. Clone the repo:
@@ -50,12 +56,3 @@ patch/ ├── frontEnd/ # React frontend │ └── ... ├── backEnd/
   ```bash
   cd server && npm run dev
   cd ../client && npm run dev
-
-## 🌍 Live Demo
-Coming soon on Vercel and Render
-
-## 📫 Connect
-LinkedIn: www.linkedin.com/in/adnan-haque-ah5
-bash
-cd server && npm run dev
-cd ../client && npm run dev
