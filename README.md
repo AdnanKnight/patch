@@ -51,10 +51,10 @@ patch/ ├── frontEnd/ # React frontend │ └── ... ├── backEnd/
   cd server && npm run dev
   cd ../client && npm run dev
 
-🌍 Live Demo
+## 🌍 Live Demo
 Coming soon on Vercel and Render
 
-📫 Connect
+## 📫 Connect
 LinkedIn: www.linkedin.com/in/adnan-haque-ah5
 bash
 cd server && npm run dev
